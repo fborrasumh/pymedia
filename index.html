@@ -496,7 +496,7 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
     <p class="fa-inicio" id="inicioProj"></p>
     <div class="fa-autores"><span class="fa-autores-cap" data-i18n="Realizada por">Realizada por</span>
       <div class="fa-autor"><span class="fa-av" style="--c:#E4572E">FB</span><div><b>Fernando Borrás Rocher</b><small>Universidad Miguel Hernández de Elche</small><a class="fa-orcid" href="https://orcid.org/0000-0002-5519-4573" target="_blank" rel="noopener">ORCID 0000-0002-5519-4573</a></div></div>
-      <p class="fa-idea"></p></div>
+      <p class="fa-idea">Ejercicios originales que siguen la secuencia del Módulo 1 «Descubriendo Python» del proyecto UNIDIGITAL-SIMUSTAT (cuadernos de F. Borrás, F. Botella, I. Hernández, Mª A. Martínez Mayoral, J. Moltó y J. Morales; CC BY-SA 4.0). No se reutiliza su texto, código ni cuestionarios.</p></div>
   </div>
   <h2 class="sec-title" data-i18n="Cómo funciona">Cómo funciona</h2>
   <div class="journey" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
@@ -514,7 +514,7 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 
 <!-- 1 · RUTA -->
 <section class="screen" data-step="1">
-  <header class="sh" style="--c:#6B4FD8"><div class="sh-ico"><svg class="i"><use href="#i-compass"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 3</p><h2 data-i18n="s.ruta">Tu ruta</h2><p class="sh-lede" data-i18n="s.ruta.lede">Los 14 temas del Módulo 1, «Descubriendo Python». Cada misión usa un caso clínico; cada tema enlaza a su cuaderno de Colab y a su vídeo.</p></div></header>
+  <header class="sh" style="--c:#6B4FD8"><div class="sh-ico"><svg class="i"><use href="#i-book"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 3</p><h2 data-i18n="s.ruta">Tu ruta</h2><p class="sh-lede" data-i18n="s.ruta.lede">Los 14 temas del Módulo 1, «Descubriendo Python». Cada misión usa un caso clínico; cada tema enlaza a su cuaderno de Colab y a su vídeo.</p></div></header>
   <div class="card" id="rutaResumen"></div>
   <div id="rutaRepaso"></div>
   <div id="rutaTemas"></div>
@@ -538,7 +538,7 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 
 <!-- 3 · PROGRESO -->
 <section class="screen" data-step="3">
-  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-chart"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 3</p><h2 data-i18n="s.progreso">Mi progreso</h2><p class="sh-lede" data-i18n="s.progreso.lede">Estrellas, errores más frecuentes y el informe que puedes entregar. Todo se guarda solo en este navegador.</p></div></header>
+  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-scale"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 3</p><h2 data-i18n="s.progreso">Mi progreso</h2><p class="sh-lede" data-i18n="s.progreso.lede">Estrellas, errores más frecuentes y el informe que puedes entregar. Todo se guarda solo en este navegador.</p></div></header>
   <div class="card" id="progResumen"></div>
   <div class="card" id="progTabla"></div>
   <div class="card" id="progAjustes"></div>
@@ -1599,7 +1599,7 @@ const I18N = {
 /* ══ motor.js — lógica pura (sin DOM): semillas, literales Python, textos en tres idiomas y mapa de temas.
    Se puede cargar en Node para probar las misiones sin navegador (tests/logic_test.py). ══ */
 const L = (es, en, pt) => ({es, en: en ?? es, pt: pt ?? en ?? es});
-const VERSION_APP = '1.0.0';
+const VERSION_APP = '1.0.1';
 
 /* ── semillas: la misma semilla da siempre el mismo ejercicio ── */
 function hash32(str) { let h = 2166136261 >>> 0; str = String(str); for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h >>> 0; }
